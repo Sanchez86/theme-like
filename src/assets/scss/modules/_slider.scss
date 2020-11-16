@@ -1,0 +1,162 @@
+.slider{
+  &__item{
+    width: 100%;
+    position: relative;
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-end;
+  }
+  &__data{
+    width: 46.3%;
+    padding-right: 130px;  //reserved place for controller (dots)
+  }
+  &__h2{
+    font-family: $mainFontBold;
+    margin-top: 8px;
+    @include font-size(69px);
+    color: $white;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 38px;
+      height: 5px;
+      background-color: $sky-blue;
+    }
+  }
+  &__h3{
+    color: $black;
+    font-family: $mainFontBold;
+    background-color: $sky-blue;
+    @include font-size(12px);
+    text-transform: uppercase;
+    padding: 6px 10px;
+    letter-spacing: 3px;
+    display: inline-block;
+  }
+  &__p{
+    font-family: $mainFont;
+    margin-top: 36px;
+    color: $white;
+    @include font-size(22px);
+    line-height: 32px;
+    width: 100%;
+    max-width: 444px;
+  }
+  &__a{
+    margin-top: 35px;
+    font-family: $mainFont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    @include font-size(12px);
+    text-transform: uppercase;
+    width: 143px;
+    line-height: 41px;
+    border: 2px solid $white;
+    letter-spacing: 2px;
+    transition: .3s;
+    &:hover{
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+.slick-track{
+  display:flex;
+  height: 100vh;
+}
+.controller{
+  position: absolute;
+  top: 34.5%;
+  right: 47px;
+  z-index: 10000;
+  width: 32px;
+  &__current-number{
+    color: $white;
+    text-align: center;
+    @include font-size(26px);
+    font-family: $mainFontBold;
+    position: relative;
+  }
+  &__start{
+    position: absolute;
+    bottom: -16px;
+    left: -9px;
+    margin: auto;
+    @include font-size(12px);
+    font-family: $mainFont;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &__dots{
+    margin-top: 26px; //reserved place for text "start"
+    width: 100%;
+    background-color: $white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 11px 0;
+  }
+}
+.slick-dots{
+  li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    button{
+      display: inline-block;
+      font-size: 0;
+      width: 12px;
+      height: 12px;
+      background-color: $gray;
+      border-radius: 100%;
+      box-shadow: inset 0 1px 4px #00000063;
+      transition: .3s;
+      &:hover{
+        background-color: $sky-blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.slick-dots li.slick-active{
+  button{
+    background-color: $sky-blue;
+  }
+}
+
+@media all and(max-width: 1199px){
+  .slider__data {
+    width: 100%;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #00000087;
+  }
+  .slick-slide{
+    width: 100% !important;
+  }
+}

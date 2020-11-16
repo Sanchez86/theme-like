@@ -1,0 +1,23 @@
+/* Fonts:
+  ========================================================================== */
+
+@import 'mixins';
+
+@font-face {
+  font-family: "Sofia-Light";
+  src: url('../fonts/sofia-light/Sofia-Pro-Light.eot'); // IE9 Compat Modes
+  src: url('../fonts/sofia-light/Sofia-Pro-Light.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../fonts/sofia-light/Sofia-Pro-Light.woff') format('woff'), // Pretty Modern Browsers
+       url('../fonts/sofia-light/Sofia-Pro-Light.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../fonts/sofia-light/Sofia-Pro-Light.svg') format('svg'); // Legacy iOS
+}
+
+@font-face {
+  font-family: "Sofia-Bold";
+  src: url('../fonts/sofia-bold/Sofia-Pro-bold.eot'); // IE9 Compat Modes
+  src: url('../fonts/sofia-bold/Sofia-Pro-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+  url('../fonts/sofia-bold/Sofia-Pro-Bold.woff') format('woff'), // Pretty Modern Browsers
+  url('../fonts/sofia-bold/Sofia-Pro-Bold.ttf')  format('truetype'), // Safari, Android, iOS
+  url('../fonts/sofia-bold/Sofia-Pro-Bold.svg') format('svg'); // Legacy iOS
+}
+
